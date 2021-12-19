@@ -1,0 +1,93 @@
+#banner	{
+	background-color: #CCFF33;
+	color: #900090;
+	text-align: center;
+	min-height: 5em;
+	border: 1px black solid;
+	width: 85%;
+}
+#logo	{
+		background-color: #FFFFFF;
+		float: right;
+		width: 180px;
+		height: 80px;
+		color: #900090;
+		text-align: center;
+}
+#index_left_sidebar	{
+		background-color:#FFFFFF;
+		color: #900090;
+		float: left;
+		width: 12%;
+		min-height: 50em;
+		text-align: center;
+}
+#index_right_sidebar	{
+		background-color: #FFFFFF;
+		color: #900090;
+		float: right;
+		width: 15%;
+		min-height: 50em;
+		text-align: center;
+}
+#content	{
+		background-color: #CCFF33;
+		color: #900090;
+		width: 72.8%;
+		float: left;
+		text-align: center;
+		border: 1px black solid;
+		min-height: 50em;
+}
+#slogan	{
+		width: 100%;
+		text-align: center;
+		color: #900090;
+		font-style: marquee;
+}
+#message	{
+		background-color: #FFFFFF;
+		text-align: center;
+		float: top;
+		width: 100%;
+}
+#footer	{
+		background-color: #900090;
+		clear:	both;
+		border: 1px black solid;
+		color: #FFFFFF;
+		text-align: center;
+		font-style: italic;
+		width: 100%;
+		min-height:5em;
+}
+#menu li 	{
+		list-style-type: none;
+		width: 7em;
+		height: 2em;
+		text-align: center;
+		margin-left: -2.5em;
+}
+#menu a	{
+			text-decoration:none;
+			color: #900090;
+			font-style: arial;
+			display: block;
+			background-color: #CCFF33;
+			box-shadow: 5px 5px 5px gray;
+			margin-bottom: 2px;
+}
+#menu a:hover		{
+			background-color: #DDDDEE;
+			box-shadow : 3px 3px 3px gray;
+			border: none;
+}
+#student_self_reg_tab	{
+			text-align: left;
+}
+#student_self_reg_header	{
+			text-align: center;
+}
+#login_details	{
+			font-style: bold;
+}

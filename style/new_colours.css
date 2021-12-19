@@ -1,0 +1,168 @@
+#banner	{
+	background-color: #99CC33;
+	color: #900090;
+	text-align: center;
+	min-height: 10em;
+	border: 1px black solid;
+	width: 85%;
+}
+#logo	{
+		background-color: #000000;
+		float: right;
+		width: 180px;
+		height: 80px;
+		color: #900090;
+		text-align: center;
+}
+#index_left_sidebar	{
+		background-color:#FFFFFF;
+		color: #900090;
+		float: left;
+		width: 12%;
+		min-height: 30em;
+		text-align: center;
+}
+#right_sidebar	{
+		background-color: #FFFFFF;
+		color: #900090;
+		float: right;
+		width: 15%;
+		min-height: 30em;
+		text-align: center;
+}
+#content	{
+		background-color: #FFFFFF;
+		width: 72.8%;
+		float: left;
+		text-align: left;
+		border: 1px black solid;
+		min-height: 30em;
+		font-style: sans-serif ;
+		font-size: 1.3em;
+}
+#slogan_bar	{
+		width: 100%;
+		text-align: center;
+		color: #900090;
+		font-style: marquee;
+}
+#message_bar	{
+		background-color: #900090;
+		color: #FFFFFF;
+		text-align: center;
+		float: top;
+		height: 1em;
+		width: 100%;
+		
+}
+#message_banner	{
+		background-color: #FFFFFF;
+		color: #006666;
+		font-style:bold;
+		text-align: center;
+		float: center;
+		min-height: 4em;
+		width: 100%;
+		
+}
+#user_banner	{
+		background-color: #900090;
+		color: #FFFFFF;
+		font-style:bold;
+		text-align: right;
+		float: right;
+		min-height: 2em;
+		width: 35%;
+		
+}
+#footer	{
+		background-color: #900090;
+		clear:	both;
+		border: 1px black solid;
+		color: #FFFFFF;
+		text-align: center;
+		font-style: italic;
+		width: 100%;
+		min-height:5em;
+}
+#menu li 	{
+		list-style-type: none;
+		width: 7em;
+		height: 5em;
+		text-align: center;
+		margin-left: -2.5em;
+		vertical-align: middle;
+		line-height: 3em;
+		font-weight:700;
+}
+#menu a	{
+			text-decoration:none;
+			color: #900090;
+			font-style: arial;
+			display: block;
+			background-color: #99CC33;
+			box-shadow: 5px 5px 5px gray;
+			margin-bottom: 2px;
+			border-radius: 4px;
+			height: 3em;
+		
+}
+#menu a:hover	{
+			background-color: #CC9933;
+			box-shadow : 3px 3px 3px gray;
+			border: none;
+}
+#student_self_reg_frm {
+	text-align:left;
+}
+#self_reg_head {
+	text-align:center;
+}
+#student_self_reg_tab	{
+			text-align: left;
+}
+#student_self_reg_header	{
+			text-align: center;
+}
+#login_details	{
+			font-style: bold;
+}
+select {
+	display: block;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 500;
+	color: #444;
+	line-height: 1.3;
+	padding: .6em 1.4em .5em .8em;
+	width: 100%;
+	border-radius: 8px;
+	border: 2px solid purple;
+}
+input[type=submit] {
+	border-radius: 4px;
+	border: 2px solid purple;
+	width:150px;
+	height:3em;
+	background-color:cyan;
+	font-weight: 500;
+	
+	
+}
+input[type=text]{
+	width: 100%;
+	padding: 12px 2px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid purple;
+	border-radius: 8px;
+	font-weight: 700;
+}
+input[type=password]{
+	width: 100%;
+	padding: 12px 2px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid purple;
+	border-radius: 8px;
+}
