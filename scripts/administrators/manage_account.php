@@ -50,7 +50,7 @@ if ($_SESSION['logged_in']!="T")
 	<div id="content" >
 		<div id="message_banner">  
 		<?php  
-			if (isset($_SESSION['array_msg']))
+			/*if (isset($_SESSION['array_msg']))
 			{
 				echo $_SESSION['array_msg'];
 				unset ($_SESSION['array_msg']);
@@ -110,11 +110,11 @@ if ($_SESSION['logged_in']!="T")
 				echo $_SESSION['max_questions_message'];
 				unset ($_SESSION['max_questions_message']);
 			}
-			/*if (isset($_SESSION['test_counter_message']))
+			if (isset($_SESSION['test_counter_message']))
 			{
 				echo $_SESSION['test_counter_message'];
 				unset ($_SESSION['test_counter_message']);
-			}*/
+			}
 			if (isset($_SESSION['summary_close_message']))
 			{
 				echo $_SESSION['summary_close_message'];
@@ -189,7 +189,7 @@ if ($_SESSION['logged_in']!="T")
 			{
 				echo $_SESSION['source_form_message'];
 				unset ($_SESSION['source_form_message']);
-			}
+			}*/
 		
 			
 		?>

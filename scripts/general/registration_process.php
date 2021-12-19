@@ -47,7 +47,7 @@ include ("../functions/update_mac_file.php");
 				extract ($row);
 				if ($user==1)
 				{
-					$_SESSION['licence_status_message']="Unauthorised deployment. Please contact vendor for support";
+					$_SESSION['licence_status_message']="Unauthorised deployment1. Please contact vendor for support";
 					header("Location:../../index.php");
 					exit;
 				}
@@ -94,7 +94,7 @@ include ("../functions/update_mac_file.php");
 		
 		if ($stored_mac!=$current_mac)					//this is different machine - abort operations
 		{
-			$_SESSION['licence_status_message']="Unauthorised deployment. Please contact vendor for support<br>";
+			$_SESSION['licence_status_message']="Unauthorised deployment2. Please contact vendor for support<br>";
 			//
 			$update_status_query="UPDATE tblusers 
 									SET user=1";

@@ -144,7 +144,7 @@ $question_counter=0;
 			<ul class="nav">
 					<br><br><br><br>
 					<li><a href='./administrator_home.php'>Home</a></li>
-					<li><a href='./administrator_home.php'>Back</a></li>
+					<li><a href='./reports.php'>Back</a></li>
 			</ul>
 		</div>		
 	</div>

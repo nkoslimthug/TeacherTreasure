@@ -49,7 +49,7 @@ if ($_SESSION['logged_in']!="T")
 	<div id="content" >
 		<div id="message_banner">  
 		<?php  
-			if (isset($_SESSION['array_msg']))
+			/*if (isset($_SESSION['array_msg']))
 			{
 				echo $_SESSION['array_msg'];
 				unset ($_SESSION['array_msg']);
@@ -104,16 +104,16 @@ if ($_SESSION['logged_in']!="T")
 				echo $_SESSION['session_pass_message'];
 				unset ($_SESSION['session_pass_message']);
 			}
-			/*if (isset($_SESSION['max_questions_message']))
+			if (isset($_SESSION['max_questions_message']))
 			{
 				echo $_SESSION['max_questions_message'];
 				unset ($_SESSION['max_questions_message']);
-			}*/
-			/*if (isset($_SESSION['test_counter_message']))
+			}
+			if (isset($_SESSION['test_counter_message']))
 			{
 				echo $_SESSION['test_counter_message'];
 				unset ($_SESSION['test_counter_message']);
-			}*/
+			}
 			if (isset($_SESSION['summary_close_message']))
 			{
 				echo $_SESSION['summary_close_message'];
@@ -129,11 +129,11 @@ if ($_SESSION['logged_in']!="T")
 				echo $_SESSION['initialise_message'];
 				unset ($_SESSION['initialise_message']);
 			}
-			/*if (isset($_SESSION['initialise_query']))
+			if (isset($_SESSION['initialise_query']))
 			{
 				echo $_SESSION['initialise_query'];
 				unset ($_SESSION['initialise_query']);
-			}*/
+			}
 			if (isset($_SESSION['incomplete_summ_messsage']))
 			{
 				echo $_SESSION['incomplete_summ_messsage'];
@@ -174,21 +174,21 @@ if ($_SESSION['logged_in']!="T")
 				echo "<br>".$_SESSION['summary_close_query'];
 				unset ($_SESSION['summary_close_query']);
 			}
-			/*if (isset($_SESSION['summary_close_query']))
+			if (isset($_SESSION['summary_close_query']))
 			{
 				echo "<br>";$_SESSION['summary_close_query']."<br>";
 				unset ($_SESSION['summary_close_query']);
-			}*/
-			/*if (isset($_SESSION['detail_close_query']))
+			}
+			if (isset($_SESSION['detail_close_query']))
 			{
 				echo "<br>".$_SESSION['detail_close_query']."<br>";
 				unset ($_SESSION['detail_close_query']);
-			}*/
+			}
 			if (isset($_SESSION['source_form_message']))
 			{
 				echo $_SESSION['source_form_message'];
 				unset ($_SESSION['source_form_message']);
-			}
+			}*/
 		
 			
 		?>

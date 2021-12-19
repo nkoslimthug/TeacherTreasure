@@ -146,7 +146,7 @@ if ($row=mysqli_fetch_assoc($score_result))
 	<div id="content" >
 		<div id="message_banner"> 
 		<?php
-			
+			/*
 			if (isset($_SESSION['blank_subject_message']))
 				{
 					echo $_SESSION['blank_subject_message'];
@@ -157,17 +157,17 @@ if ($row=mysqli_fetch_assoc($score_result))
 					echo $_SESSION['blank_paper_message'];
 					unset ($_SESSION['blank_paper_message']);
 				}
-			/*	if (isset($_SESSION['dataload_query']))
+				if (isset($_SESSION['dataload_query']))
 				{
 					echo $_SESSION['dataload_query'];
 					unset ($_SESSION['dataload_query']);
-				}*/
+				}
 				if (isset($_SESSION['dataload_message']))
 				{
 					echo $_SESSION['dataload_message'];
 					unset ($_SESSION['dataload_message']);
 				}
-			
+			*/
 		?>
 		
 		</div>

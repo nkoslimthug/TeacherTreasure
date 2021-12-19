@@ -20,7 +20,7 @@ $test_query="SELECT *
 if (!$test_result=mysqli_query($cxn,$test_query))
 {
 	$_SESSION['test_message']="Failed to extract parameters from DB :".mysqli_error($cxn)."<br>";
-	echo $_SESSION['test_message'];
+	//echo $_SESSION['test_message'];
 }
 else
 {
@@ -53,7 +53,7 @@ $scheduled_query="SELECT m.test_owner,m.subject_code,m.subject_counter,m.posted_
 					AND m.grade=".$_SESSION['student_grade']."
 					AND m.test_deadline>='".$today."'
 					ORDER BY m.test_owner,m.subject_code,m.posted_date";
-echo $scheduled_query."<br>";
+//echo $scheduled_query."<br>";
 if (!$scheduled_result=mysqli_query($cxn,$scheduled_query))
 {
 	$_SESSION['scheduled_message']="No recorded tests exist for user <b>".$_SESSION['fullname']."</b><br>";
@@ -165,13 +165,13 @@ $_SESSION['origin']='SCH';
 								if ($subject_counter==0)
 								{
 									//test parameters (in memory)
-									echo "Test owner is ".$scheduled_array[$record_counter][0]."<br>";
-									echo "Current subject is ".$scheduled_array[$record_counter][1]."<br>";
-									echo "Current grade is ".$_SESSION['student_grade']."<br>";
-									echo "Subject counter is ".$scheduled_array[$record_counter][2]."<br>";
-									echo "Current student is ".$_SESSION['username']."<br>";
+									//echo "Test owner is ".$scheduled_array[$record_counter][0]."<br>";
+									//echo "Current subject is ".$scheduled_array[$record_counter][1]."<br>";
+									//echo "Current grade is ".$_SESSION['student_grade']."<br>";
+									//echo "Subject counter is ".$scheduled_array[$record_counter][2]."<br>";
+									//echo "Current student is ".$_SESSION['username']."<br>";
 									$combined_parameters=$scheduled_array[$record_counter][0]."_".$scheduled_array[$record_counter][1]."_".$_SESSION['student_grade']."_".$scheduled_array[$record_counter][2]."_".$_SESSION['username'];
-									echo $combined_parameters."<br>";
+									//echo $combined_parameters."<br>";
 									$subjects[$subject_counter]=$scheduled_array[$record_counter][1];
 									//echo "Zero record<br>";
 									//echo "Subject $subject_label is <b>".$subjects[$subject_counter]."</b><br>";
@@ -215,13 +215,13 @@ $_SESSION['origin']='SCH';
 								else if ($subject_counter>0)
 								{
 									//test parameters (in memory)
-									echo "Test owner is ".$scheduled_array[$record_counter][0]."<br>";
-									echo "Current subject is ".$scheduled_array[$record_counter][1]."<br>";
-									echo "Current grade is ".$_SESSION['student_grade']."<br>";
-									echo "Subject counter is ".$scheduled_array[$record_counter][2]."<br>";
-									echo "Current student is ".$_SESSION['username']."<br>";
+									//echo "Test owner is ".$scheduled_array[$record_counter][0]."<br>";
+									//echo "Current subject is ".$scheduled_array[$record_counter][1]."<br>";
+									//echo "Current grade is ".$_SESSION['student_grade']."<br>";
+									//echo "Subject counter is ".$scheduled_array[$record_counter][2]."<br>";
+									//echo "Current student is ".$_SESSION['username']."<br>";
 									$combined_parameters=$scheduled_array[$record_counter][0]."_".$scheduled_array[$record_counter][1]."_".$_SESSION['student_grade']."_".$scheduled_array[$record_counter][2]."_".$_SESSION['username'];
-									echo $combined_parameters."<br>";
+									//echo $combined_parameters."<br>";
 									if (!in_array($scheduled_array[$record_counter][1],$subjects))
 									{	
 										$subjects[$subject_counter]=$scheduled_array[$record_counter][1];

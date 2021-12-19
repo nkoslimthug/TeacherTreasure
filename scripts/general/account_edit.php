@@ -55,7 +55,7 @@
 		
 		if ($_SESSION['source_form']=="manage_account.php")
 		{
-			$back_action="../administrators/administrator_home.php";
+			$back_action="../administrators/manage_account.php";
 			$home_action="../administrators/administrator_home.php";
 			$cancel_action="../administrators/administrator_home.php";
 		}

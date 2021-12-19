@@ -42,7 +42,7 @@ $_SESSION['story_content']='';
 		<br><br><br>
 		<div id="menu">
 			<ul class="nav">
-					<li><a href='administrator_home.php'>Back</a></li>
+					<li><a href='content_manage.php'>Back</a></li>
 					<li><a href='administrator_home.php'>Home</a></li>
 					<li><a href="<?php echo $root_path;?>/scripts/general/logout.php">Logout</a></li>
      			</ul>
