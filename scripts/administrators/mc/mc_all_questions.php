@@ -160,9 +160,16 @@ include ("../../functions/table_tmp_file_update.php");
 					//Process Image
 								if ($_SESSION['image_id']!=0)
 								{
-									$image_query="SELECT * FROM tblimages WHERE image_id={$_SESSION['image_id']}";
+									$image_query="SELECT * 
+												FROM tblimages 
+												WHERE image_id=".$_SESSION['image_id'];
+									echo $image_query."<br>";
 									$image_result=mysqli_query($cxn,$image_query);
-									$row=mysqli_fetch_assoc($image_result);
+									if (!$row=mysqli_fetch_assoc($image_result))
+									{
+										$_SESSION['image_message']="No image found for question ".$_SESSION['subject_code']."_".$_SESSION['topic_id']."_".$question_number."<br>";
+										header ("Location:../administrator_home.php");
+									}
 									extract($row);
 								//	echo "Image ID is ".$_SESSION['image_id']."<br>";
 								//	echo "Image title is $image_title <br>";

@@ -224,6 +224,12 @@ foreach ($_POST as $key => $value)
 				echo $_SESSION['subject_count_query'];
 				unset ($_SESSION['subject_count_query']);
 			}
+			if(isset($_SESSION['image_message']))
+			{
+				echo $_SESSION['image_message'];
+				unset ($_SESSION['image_message']);
+			}
+			
 			/*if (isset($_SESSION['initialise_query']))
 			{
 				echo $_SESSION['initialise_query'];
