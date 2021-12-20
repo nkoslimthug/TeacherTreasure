@@ -163,7 +163,7 @@ include ("../../functions/table_tmp_file_update.php");
 									$image_query="SELECT * 
 												FROM tblimages 
 												WHERE image_id=".$_SESSION['image_id'];
-									echo $image_query."<br>";
+									//echo $image_query."<br>";
 									$image_result=mysqli_query($cxn,$image_query);
 									if (!$row=mysqli_fetch_assoc($image_result))
 									{
