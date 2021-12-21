@@ -118,7 +118,14 @@ include ("../../functions/draw_table33.php");
 		playsound();
 		$_SESSION['verdict']=$_SESSION['correct_answer'];
 		$_SESSION['submitted_answer']=$answer;
-		header ('Location:./mc_all_questions.php');
+		if($_SESSION['question_counter']!=$_SESSION['question_count'])
+		{
+			header ('Location:./mc_all_questions.php');
+		}
+		else
+		{	
+			header ('Location:../all_select_frm.php');
+		}
 	}
 	else if (!isset($_POST['btnAnswer']))
 	{

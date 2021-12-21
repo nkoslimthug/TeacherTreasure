@@ -6,7 +6,9 @@ include ("../../functions/draw_table33.php");
 include ("../../functions/table_tmp_file_create.php");
 include ("../../functions/table_tmp_file_update.php");
 
-
+	
+	
+	
 	if ($_SESSION['logged_in']!="T")
 	{
 		session_destroy();
@@ -65,6 +67,18 @@ include ("../../functions/table_tmp_file_update.php");
 	//echo "Question count is ".$_SESSION['question_count']."<br>";
 	//echo "The question counter is now ".$_SESSION['question_counter']."<br>";
 	$question_counter=$_SESSION['question_counter'];
+	
+	function next_button()
+	{
+		if($_SESSION['question_counter']==$_SESSION['question_count']) 
+		{
+			echo "End Review"; 
+		}
+		else
+		{  
+			echo "Next Question -->>";
+		}
+	}
 	
 	
 	//Load random question
@@ -409,7 +423,7 @@ include ("../../functions/table_tmp_file_update.php");
 					<hr/>
 					<table >
 						<tr>
-							<td><input style="background-color: green; font-weight: bolder;" type="submit" name="btnAnswer" id="btnAnswer" value="Next Question" /></td>
+							<td><input style="background-color: green; font-weight: bolder;" type="submit" name="btnAnswer" id="btnAnswer" value="<?php next_button(); ?>" /></td>
 							<td><input style="background-color: red; font-weight: bolder;" type="submit" name="<?php echo  $subject_code|$topic_id|$question_number; ?>" id="btnAbort" value="Report Question" /></td>
 							<td><input style="background-color: red; font-weight: bolder;" type="submit" name="btnAbort" id="btnAbort" value="Abort" /></td>
 						</tr>
