@@ -128,8 +128,9 @@ include ("./mc_table_load.php");
 	//Determine TopicID
 		$topic_query="SELECT topic_id 
 						FROM tbltopics 
-						WHERE topic_name='".$_SESSION['topic_name']."'";
-		//echo $topic_query."<br/>";
+						WHERE topic_name='".$_SESSION['topic_name']."' 
+						AND subject_code= ".$_SESSION['subject_code'];
+		echo $topic_query."<br/>";
 		$topic_result=mysqli_query($cxn,$topic_query);
 		$row=mysqli_fetch_assoc($topic_result);
 		extract($row);
@@ -259,9 +260,16 @@ include ("./mc_table_load.php");
 												AND topic_id=$topic_id
 												AND lower_grade<=$grade
 												AND upper_grade>=$grade
+												ORDER BY rand() LIMIT 1";
+												/*$question_select_query="SELECT * 
+												FROM tblmcquestions 
+												WHERE subject_code=$subject_code 
+												AND topic_id=$topic_id
+												AND lower_grade<=$grade
+												AND upper_grade>=$grade
 												AND story_id=".$_SESSION['story_id'].
-												" ORDER BY rand() LIMIT 1";
-						//echo $question_select_query."<br/>";
+												" ORDER BY rand() LIMIT 1";*/
+						echo $question_select_query."<br/>";
 						
 						if (!$question_select_result=mysqli_query($cxn,$question_select_query))
 						{
