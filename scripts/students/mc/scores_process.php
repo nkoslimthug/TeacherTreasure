@@ -107,9 +107,13 @@ $score_query="SELECT score
 			AND	subject_name='$subject'
 			AND topic_name='$topic'
 			AND start_time='$start_time'"; 
-//echo $score_query.'<br>';
+echo $score_query.'<br>';
 $score_result=mysqli_query($cxn,$score_query);
-if ($row=mysqli_fetch_assoc($score_result))
+if (!$row=mysqli_fetch_assoc($score_result))
+{
+	$_SESSION['no_score']="Failed to extract score ".mysqli_error($cxn)."<br/>";
+}
+else
 {
 	extract ($row);
 }
@@ -146,6 +150,11 @@ if ($row=mysqli_fetch_assoc($score_result))
 	<div id="content" >
 		<div id="message_banner"> 
 		<?php
+			if (isset($_SESSION['no_score']))
+			{
+				echo $_SESSION['no_score'];
+				unset ($_SESSION['no_score']);
+			}
 			/*
 			if (isset($_SESSION['blank_subject_message']))
 				{
@@ -186,7 +195,8 @@ if ($row=mysqli_fetch_assoc($score_result))
 													else if ($_SESSION['source_form']=='scores')
 													{
 														echo "<br><br>";
-														echo "Your score for this test is <b style='color:blue'>".$score."</b><font color='#900090'> percent <b style='color:blue'></b><font color='#900090'><br/>";
+														if (isset($score))
+															echo "Your score for this test is <b style='color:blue'>".$score."</b><font color='#900090'> percent <b style='color:blue'></b><font color='#900090'><br/>";
 														echo "<hr>";
 														echo "<br><br>";
 													}
