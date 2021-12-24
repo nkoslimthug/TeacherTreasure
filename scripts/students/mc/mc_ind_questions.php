@@ -130,11 +130,19 @@ include ("./mc_table_load.php");
 						FROM tbltopics 
 						WHERE topic_name='".$_SESSION['topic_name']."' 
 						AND subject_code= ".$_SESSION['subject_code'];
-		echo $topic_query."<br/>";
+		//echo $topic_query."<br/>";
 		$topic_result=mysqli_query($cxn,$topic_query);
-		$row=mysqli_fetch_assoc($topic_result);
-		extract($row);
-		$_SESSION['topic_id']=$topic_id;
+		if (!$row=mysqli_fetch_assoc($topic_result))
+		{
+			$_SESSION['topic_message']="Topic not found ".mysqli_error($cxn)."<br>";
+			header ("Location:../student_home.php");
+			exit;
+		}
+		else
+		{
+			extract($row);
+			$_SESSION['topic_id']=$topic_id;
+		}
 	
 	//Start timer
 	if ($_SESSION['question_counter']==0)   //record start time
@@ -254,22 +262,22 @@ include ("./mc_table_load.php");
 					//$answered_strings='';
 					while($_SESSION['question_counter']<=$_SESSION['batch_size']) //change condition
 					{
-						$question_select_query="SELECT * 
+						/*$question_select_query="SELECT * 
 												FROM tblmcquestions 
 												WHERE subject_code=$subject_code 
 												AND topic_id=$topic_id
 												AND lower_grade<=$grade
 												AND upper_grade>=$grade
-												ORDER BY rand() LIMIT 1";
-												/*$question_select_query="SELECT * 
+												ORDER BY rand() LIMIT 1";*/
+												$question_select_query="SELECT * 
 												FROM tblmcquestions 
 												WHERE subject_code=$subject_code 
 												AND topic_id=$topic_id
 												AND lower_grade<=$grade
 												AND upper_grade>=$grade
 												AND story_id=".$_SESSION['story_id'].
-												" ORDER BY rand() LIMIT 1";*/
-						echo $question_select_query."<br/>";
+												" ORDER BY rand() LIMIT 1";
+						//echo $question_select_query."<br/>";
 						
 						if (!$question_select_result=mysqli_query($cxn,$question_select_query))
 						{

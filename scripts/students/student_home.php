@@ -211,6 +211,11 @@ if ($_SESSION['logged_in']!="T")
 				echo $_SESSION['array_msg'];
 				unset ($_SESSION['array_msg']);
 			}
+			if (isset($_SESSION['topic_message']))
+			{
+				echo $_SESSION['topic_message'];
+				unset ($_SESSION['topic_message']);
+			}
 					
 			unset ($_SESSION['question_type']);
 			if ($_SESSION['logged_in']!="T")
