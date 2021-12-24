@@ -107,7 +107,7 @@ $score_query="SELECT score
 			AND	subject_name='$subject'
 			AND topic_name='$topic'
 			AND start_time='$start_time'"; 
-echo $score_query.'<br>';
+//echo $score_query.'<br>';
 $score_result=mysqli_query($cxn,$score_query);
 if (!$row=mysqli_fetch_assoc($score_result))
 {

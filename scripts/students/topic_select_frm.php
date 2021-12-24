@@ -142,7 +142,8 @@ else
 																	AND m.lower_grade<=".$_SESSION['grade']."
 																	AND m.upper_grade>=".$_SESSION['grade']."
 																	AND m.subject_code=".$_SESSION['subject_code']."
-																	GROUP BY m.subject_code,t.topic_name HAVING COUNT(m.topic_id)>10
+																	GROUP BY m.subject_code,t.topic_name 
+																	HAVING COUNT(m.topic_id)>10
 																	ORDER BY t.topic_id";
 													if ($topic_result=mysqli_query($cxn,$topic_query))
 													{
@@ -182,6 +183,7 @@ else
 								</table>                    
 								<p>&nbsp;</p>
 								<p>
+									<?php //echo $topic_query."<br/>"; ?>
 									<input type="submit" name="btnPaperSubmission" id="btnPaperSubmission" value="Submit Request" />	
 								</p>
 							</form>
