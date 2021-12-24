@@ -150,12 +150,12 @@ else
 	<div id="content" >
 		<div id="message_banner"> 
 		<?php
-			if (isset($_SESSION['no_score']))
+			/*if (isset($_SESSION['no_score']))
 			{
 				echo $_SESSION['no_score'];
 				unset ($_SESSION['no_score']);
 			}
-			/*
+			
 			if (isset($_SESSION['blank_subject_message']))
 				{
 					echo $_SESSION['blank_subject_message'];
