@@ -216,6 +216,11 @@ if ($_SESSION['logged_in']!="T")
 				echo $_SESSION['topic_message'];
 				unset ($_SESSION['topic_message']);
 			}
+			if (isset($_SESSION['no_question']))
+			{
+				echo $_SESSION['no_question'];
+				unset ($_SESSION['no_question']);
+			}
 					
 			unset ($_SESSION['question_type']);
 			if ($_SESSION['logged_in']!="T")

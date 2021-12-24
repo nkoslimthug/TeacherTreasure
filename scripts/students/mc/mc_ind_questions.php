@@ -279,12 +279,14 @@ include ("./mc_table_load.php");
 												" ORDER BY rand() LIMIT 1";
 						//echo $question_select_query."<br/>";
 						
-						if (!$question_select_result=mysqli_query($cxn,$question_select_query))
+						$question_select_result=mysqli_query($cxn,$question_select_query);
+						
+						if (!$row=mysqli_fetch_assoc($question_select_result))
 						{
-							$message= "Error : \n".mysqli_error($cxn);
-							//echo "<script type = 'text/javascript'>alert('".$message."')</script>";
+							$_SESSION['no_question']="Failed to retrieve question ".mysqli_error($cxn)."<br/>";
+							header ("Location:../student_home.php");
+							exit;
 						}
-						$row=mysqli_fetch_assoc($question_select_result);
 						extract ($row);
 						$_SESSION['instruction']=$instruction;
 						$_SESSION['true_answer']=$true_answer;
