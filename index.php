@@ -5,7 +5,7 @@ session_start();
 <html>
 <head>
 	<title>
-		Cyber Home
+		Teacher Treasure
 	</title>
 			<link rel="stylesheet"	type="text/css"	href="./style/college.css" />
 			<style type="text/css">
